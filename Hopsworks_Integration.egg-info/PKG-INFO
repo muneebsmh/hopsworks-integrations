@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: Hopsworks-Integration-Test-Syed-Muneeb-Hussain
-Version: 1.1.3
+Name: Hopsworks-Integration
+Version: 0.0.1
 Summary: A python package that exposes functions to interact with the Hopsworks feature store
 Home-page: https://github.com/TSGNC/basketball-feature-tool
 Author: Syed Muneeb Hussain
@@ -14,8 +14,8 @@ Requires-Python: >=3.7,<3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-# basketball-feature-tool
-The basketball feature tool project has been built to be called using the CLI commands. This application provides the abstraction with the Hopsworks Feature Store and lets the user build and retrieve the required Hopsworks feature groups and feature view.
+# Hopsworks-Integration
+This project has been built to be called using the CLI commands. This application provides the abstraction with the Hopsworks Feature Store and lets the user build and retrieve the required Hopsworks feature groups and feature view.
 
 ## Configurations:
 There is a conf.json file in the project that lets the user store the necessary credentials like the database connection, and hopsworks credentials, and the json files that are used to build feature groups and views. This is a one time setting and is done while setting up the project on the local machine. Once set, there is no need to reset these values for each run.
@@ -25,8 +25,14 @@ To make this application callable from the CLI commands, 12 execution modes have
 ```
 python.exe cmd.py --conf /path/to/config/conf.json --run_mode get_group --group_name gp_box_score --group_version 1
 ```
+## Calling Modes:
+This application has two execution modes:
+1) It can either be called directly using the CLI commands, in that case you need to pull this Github repo and execute the **_cmd.py python_** file present in the src directory. **_To be able to run this command, make sure to switch the directory to src._**
+2) It can also be called using import command by installing this library from the pypi and using it in your existing project.    
 
-## Explanation of the runtime arguments:
+The details of both the calling modes are described below. The user can choose either one of them. 
+## CLI Calling Mode:
+### Explanation of the runtime arguments:
 
 1) _--conf:_ This tells the path to the config file containing database and hopsworks credentials.
 2) _--build_conf:_ This tells the path to the groups.json or views.json config file where you will define the source and destination and the schema of the feature group or view.
@@ -43,7 +49,7 @@ conf, run_mode
 ### Optional arguments: 
 build_conf, group_name, group_version, view_name, view_version, file_path, and file_name are optional and will be used based on the operation type. For e.g. if you are running only get_group then you don't need to specify build_conf argument, but you when you are running build_group, then you need to specify build_conf argument but you don't need to specify group version in that. See the examples below for clarification.
 
-## Example Runs:
+### Example Runs:
 ```
 1) `python.exe cmd.py --conf "/path/to/config/conf.json" --run_mode get_group --group_name gp_game_base --group_version 1`
 2) `python.exe cmd.py --conf "/path/to/config/conf.json" --run_mode get_group_features --group_name gp_box_score --group_version 1 --features adv_idx_uuid,box_type,mp`
@@ -59,7 +65,7 @@ build_conf, group_name, group_version, view_name, view_version, file_path, and f
 12) `python.exe cmd.py --conf "/path/to/config/conf.json" --run_mode drop_view --view_name t1vst2 --view_version 1`
 ```
 
-## Operation Types:
+### Operation Types:
 
 ### get_group:  
 This operation takes group name and group version as the command line arguments and returns the respective feature group handle.  
@@ -173,4 +179,32 @@ _example:_
 python.exe cmd.py --conf "/path/to/config/conf.json" --run_mode drop_view --view_name t1vst2 --view_version 1
 ```  
 
+## Library Calling Mode:
+The run modes, and functions are the same as described in the **_CLI Calling Mode_**. The only difference is that, in this mode you can install this project as a library in your existing python project and use like any other libraries.  
+The steps to install and use this as a standalone library are:
+1) Create an empty python project or open up your existing python project in which you want to use any of the 12 functions written in this project.
+2) Install this library using `pip install -i https://test.pypi.org/simple/ Hopsworks-Integration-Test-Syed-Muneeb-Hussain`
+3) This command will install all the required dependencies in your project.
+4) Once the installation is done, the library can be used by: 
+```
+import src.Cmd as s
+
+# For operations which return something like get_group, get_view, get_group_features, get_view_features
+arguments = []
+df = s.main(arguments)
+
+
+# For operations which do not return anything like build_group_from_db, drop_group, etc.
+arguments = []
+df = s.main(arguments)
+
+# arguments is a list, which is composed of all the arguments that you write in the CLI calling mode.
+# For e.g.: 
+# To get group features in CLI, you will write: 
+# python.exe cmd.py --conf /path/to/config/conf.json --run_mode get_group_features --group_name gp_box_score --group_version 1 --features adv_idx_uuid,box_type,mp
+# To get group features in Library Mode, you will write:
+# import src.Cmd as s
+# arguments = ["--conf","/path/to/config/conf.json","--run_mode","get_group_features","--group_name","gp_box_score","--group_version","1","--features","adv_idx_uuid,box_type,mp"]
+# df = s.main(arguments)
+```
 
