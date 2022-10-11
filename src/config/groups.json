@@ -1,0 +1,217 @@
+{
+  "gp_game_base": {
+    "table_name": "adv_idx",
+    "hopsworks_group_name": "gp_game_base",
+    "hopsworks_group_version": 1,
+    "description": "to be filled",
+    "primary_key": [
+      "uuid"
+    ],
+    "partition_key": [
+    ],
+    "features": [
+      "uuid",
+      "Season_Year AS Season",
+      "G_Type",
+      "Date",
+      "Team1",
+      "Team2",
+      "Year",
+      "Month",
+      "Day",
+      "T1_Loc",
+      "T1_sea_g_played",
+      "T1_sea_g_played_h",
+      "T1_sea_g_played_a",
+      "T1_rest_day",
+      "T1_B2B",
+      "T2_Loc",
+      "T2_sea_g_played",
+      "T2_sea_g_played_h",
+      "T2_sea_g_played_a",
+      "T2_rest_day",
+      "T2_B2B"
+    ],
+    "derived_features": [
+      "'NBA' AS League"
+    ]
+  },
+  "gp_adv_stats": {
+    "table_name": "adv_as",
+    "hopsworks_group_name": "gp_adv_stats",
+    "hopsworks_group_version": 1,
+    "description": "to be filled",
+    "primary_key": [
+      "adv_idx_uuid",
+      "Box_Type"
+    ],
+    "partition_key": [
+      ""
+    ],
+    "features": [
+      "adv_idx_uuid",
+      "Box_Type",
+      "PD_Poss",
+      "T1_FGA_Poss_Prop",
+      "T1_2PA_Poss_Prop",
+      "T1_3PA_Poss_Prop",
+      "T1_FTA_Poss_Prop",
+      "T1_Poss_Sdp",
+      "T1_Poss_Cnt",
+      "T1_Poss_Sec",
+      "T1_PF_Poss_Pct",
+      "T1_TOV_Poss_Pct",
+      "T1_FTA_FGA_Rto",
+      "T1_EFG_Pct",
+      "T1_TS_Pct",
+      "T1_OREB_REB_Pct",
+      "T1_DREB_REB_Pct",
+      "T2_FGA_Poss_Prop",
+      "T2_2PA_Poss_Prop",
+      "T2_3PA_Poss_Prop",
+      "T2_FTA_Poss_Prop",
+      "T2_Poss_Sdp",
+      "T2_Poss_Cnt",
+      "T2_Poss_Sec",
+      "T2_TOV_Poss_Pct",
+      "T2_PF_Poss_Pct",
+      "T2_FTA_FGA_Rto",
+      "T2_EFG_Pct",
+      "T2_TS_Pct",
+      "T2_OREB_REB_Pct",
+      "T2_DREB_REB_Pct",
+      "PT_Poss"
+    ],
+    "derived_features": [
+      "adv_idx_uuid AS uuid"
+    ]
+  },
+  "gp_box_score": {
+    "table_name": "adv_bs",
+    "hopsworks_group_name": "gp_box_score",
+    "hopsworks_group_version": 1,
+    "description": "to be filled",
+    "primary_key": [
+      "adv_idx_uuid",
+      "Box_Type"
+    ],
+    "partition_key": [
+      ""
+    ],
+    "features": [
+      "adv_idx_uuid",
+      "Box_Type",
+      "MP",
+      "T1_PTS",
+      "T1_Result",
+      "T1_FGM",
+      "T1_FGA",
+      "T1_FG_Pct",
+      "T1_3PM",
+      "T1_3PA",
+      "T1_3P_Pct",
+      "T1_2PM",
+      "T1_2PA",
+      "T1_2P_Pct",
+      "T1_FTM",
+      "T1_FTA",
+      "T1_FT_Pct",
+      "T1_OREB",
+      "T1_DREB",
+      "T1_REB",
+      "T1_AST",
+      "T1_STL",
+      "T1_BLK",
+      "T1_TOV",
+      "T1_PF",
+      "T2_PTS",
+      "T2_Result",
+      "T2_FGM",
+      "T2_FGA",
+      "T2_FG_Pct",
+      "T2_3PM",
+      "T2_3PA",
+      "T2_3P_Pct",
+      "T2_2PM",
+      "T2_2PA",
+      "T2_2P_Pct",
+      "T2_FTM",
+      "T2_FTA",
+      "T2_FT_Pct",
+      "T2_OREB",
+      "T2_DREB",
+      "T2_REB",
+      "T2_AST",
+      "T2_STL",
+      "T2_BLK",
+      "T2_TOV",
+      "T2_PF"
+    ],
+    "derived_features": [
+      "adv_idx_uuid AS uuid",
+      "T2_pts - T1_pts AS PD_Box",
+      "T2_pts + T1_pts AS PT_Box"
+    ]
+  },
+  "test_group_from_view":
+  {
+    "hopsworks_view_name": "t1vst2",
+    "hopsworks_view_version": 1,
+    "hopsworks_group_name": "test_group_from_view",
+    "hopsworks_group_version": 1,
+    "description": "to be filled",
+    "primary_key": [
+      "adv_idx_uuid",
+      "Box_Type"
+    ],
+    "partition_key": [
+      ""
+    ],
+    "features": [
+      "uuid",
+      "Box_Type",
+      "MP",
+      "T1_PTS",
+      "T1_Result",
+      "T1_FGM",
+      "T1_FGA",
+      "T1_FG_Pct",
+      "T1_3PM",
+      "T1_3PA",
+      "T1_3P_Pct"
+	]
+  },
+  "test_group_from_file":
+  {
+    "file_path": "D:\\Documents\\Office Documents\\Toptal\\TSGNC\\basketball-feature-tool\\files\\",
+    "file_name": "import.csv",
+    "sep": "|",
+    "index_col": "None",
+    "header_row": 0,
+    "quote_char": "\"",
+    "escape_char": "\"",
+    "hopsworks_group_name": "test_group_from_file",
+    "hopsworks_group_version": 1,
+    "description": "to be filled",
+    "primary_key": [
+      "adv_idx_uuid",
+      "Box_Type"
+    ],
+    "partition_key": [
+      ""
+    ],
+    "features": [
+      "adv_idx_uuid",
+      "Box_Type",
+      "MP",
+      "T1_PTS",
+      "T1_Result",
+      "T1_FGM",
+      "T1_FGA",
+      "T1_FG_Pct",
+      "T1_3PM",
+      "T1_3PA",
+      "T1_3P_Pct"
+	]
+  }
+}

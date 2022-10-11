@@ -1,0 +1,19 @@
+2022-10-07 02:59:00,512 [INFO] The job has started
+2022-10-07 02:59:00,513 [INFO] Getting feature groups details
+2022-10-07 02:59:00,514 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 02:59:03,874 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 02:59:03,877 [INFO] Trying to retrieve a feature group
+2022-10-07 02:59:04,202 [INFO] Feature group has been successfully retrieved
+2022-10-07 02:59:04,203 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 02:59:06,025 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 02:59:06,028 [INFO] Trying to retrieve a feature group
+2022-10-07 02:59:06,364 [INFO] Feature group has been successfully retrieved
+2022-10-07 02:59:06,367 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 02:59:08,049 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 02:59:08,051 [INFO] Trying to retrieve a feature group
+2022-10-07 02:59:08,365 [INFO] Feature group has been successfully retrieved
+2022-10-07 02:59:09,087 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 02:59:10,853 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 02:59:10,855 [INFO] Trying to build a feature view
+2022-10-07 02:59:10,856 [INFO] Retrieving the respective feature group
+2022-10-07 02:59:13,111 [INFO] Feature view has been successfully created

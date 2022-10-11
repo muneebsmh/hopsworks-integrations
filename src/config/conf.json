@@ -1,0 +1,11 @@
+{
+  "host": "localhost",
+  "database": "nba",
+  "username": "root",
+  "password": "root",
+  "hopsworks_host": "c.app.hopsworks.ai",
+  "hopsworks_port": "443",
+  "hopsworks_project": "basketball_feature_tool",
+  "hopsworks_api_key_value": "oBo1bB2QzeD6AIzT.WXujCzTCPaHI2yKe0GnMHu7IIe0dRPKBLKaDz0tbekGlfFoLbBIDMwfGYMyQPElv",
+  "log_path": "D:\\Documents\\Office Documents\\Toptal\\TSGNC\\basketball-feature-tool\\logs"
+}

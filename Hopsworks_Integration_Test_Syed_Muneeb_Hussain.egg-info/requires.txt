@@ -1,0 +1,4 @@
+hopsworks==3.0.3
+pandas
+SQLAlchemy
+pytest

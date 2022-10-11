@@ -1,0 +1,7 @@
+2022-10-06 23:30:03,996 [INFO] The job has started
+2022-10-06 23:30:03,997 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-06 23:30:09,501 [INFO] Connection successfully established with the hopsworks project
+2022-10-06 23:30:09,502 [INFO] Trying to retrieve a feature group
+2022-10-06 23:30:09,815 [INFO] Feature group has been successfully retrieved
+2022-10-06 23:30:10,091 [ERROR] Metadata operation error: (url: https://c.app.hopsworks.ai/hopsworks-api/api/project/1147/featurestores/query). Server response: 
+HTTP code: 400, HTTP reason: Bad Request, error code: 270082, error msg: Feature does not exist, user msg: Feature: adv_idx_uuid not found in feature group: gp_game_base

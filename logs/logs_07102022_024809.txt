@@ -1,0 +1,11 @@
+2022-10-07 02:48:09,515 [INFO] The job has started
+2022-10-07 02:48:09,524 [INFO] Trying to establish connection with the database
+2022-10-07 02:48:09,560 [INFO] Database connection successful
+2022-10-07 02:48:09,561 [INFO] Getting table details and data from the database
+2022-10-07 02:48:09,562 [INFO] Running query in the database
+2022-10-07 02:48:09,880 [INFO] Query executed successfully
+2022-10-07 02:48:09,881 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 02:48:12,722 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 02:48:12,723 [INFO] Trying to build a feature group
+2022-10-07 02:49:23,116 [INFO] Feature group has been successfully built
+2022-10-07 02:49:23,123 [INFO] Database connection closed

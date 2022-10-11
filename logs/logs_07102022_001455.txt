@@ -1,0 +1,10 @@
+2022-10-07 00:14:55,446 [INFO] The job has started
+2022-10-07 00:14:55,448 [INFO] Getting details from the feature view
+2022-10-07 00:14:55,448 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 00:14:58,510 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 00:14:58,513 [INFO] Trying to retrieve a feature view
+2022-10-07 00:15:00,399 [INFO] Feature view has been successfully retrieved
+2022-10-07 00:15:40,830 [INFO] Trying to establish a connection with the hopsworks project
+2022-10-07 00:15:43,137 [INFO] Connection successfully established with the hopsworks project
+2022-10-07 00:15:43,139 [INFO] Trying to build a feature group
+2022-10-07 00:16:57,729 [INFO] Feature group has been successfully built
