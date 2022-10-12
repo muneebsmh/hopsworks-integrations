@@ -191,3 +191,6 @@ df = s.main(arguments)
 # arguments = ["--conf","/path/to/config/conf.json","--run_mode","get_group_features","--group_name","gp_box_score","--group_version","1","--features","adv_idx_uuid,box_type,mp"]
 # df = s.main(arguments)
 ```
+
+## Documentation:
+The detailed documentation of the product and all its function can be found here: https://github.com/muneebsmh/hopsworks-integrations/blob/main/Basketball-Feature-Tool%20-%20Documentation.pdf
