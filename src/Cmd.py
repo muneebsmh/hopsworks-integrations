@@ -6,6 +6,7 @@ from src.service import SimpleFeatureService, ComplexFeatureService
 from src.utils import process_logging
 from pathlib import Path
 import sys
+import os
 
 def main(argv=sys.argv[1:]):
     try:
@@ -117,7 +118,8 @@ def main(argv=sys.argv[1:]):
         today_datetime = datetime.now().strftime("%d%m%Y_%H%M%S")
         Path(conf['log_path']).mkdir(parents=True, exist_ok=True)
         process_logger = process_logging.process_logging()
-        process_logger.process_log('logger', conf['log_path'] + '\\logs_' + today_datetime + '.txt')
+        log_path =  os.path.join(conf['log_path'],'logs_'+today_datetime+'.txt')
+        process_logger.process_log('logger',log_path)
         logger = logging.getLogger('logger')
 
         logger.info('The job has started')
