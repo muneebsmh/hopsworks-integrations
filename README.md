@@ -167,7 +167,7 @@ python.exe cmd.py --conf "/path/to/config/conf.json" --run_mode drop_view --view
 The run modes, and functions are the same as described in the **_CLI Calling Mode_**. The only difference is that, in this mode you can install this project as a library in your existing python project and use like any other libraries.  
 The steps to install and use this as a standalone library are:
 1) Create an empty python project or open up your existing python project in which you want to use any of the 12 functions written in this project.
-2) Install this library using `pip install Hopsworks-Integration==0.0.1`
+2) Install this library using `pip install Hopsworks-Integration==0.0.2`
 3) This command will install all the required dependencies in your project.
 4) Once the installation is done, the library can be used by: 
 ```
