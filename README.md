@@ -193,4 +193,4 @@ df = s.main(arguments)
 ```
 
 ## Documentation:
-The detailed documentation of the product and all its function can be found here: https://github.com/muneebsmh/hopsworks-integrations/blob/main/Basketball-Feature-Tool%20-%20Documentation.pdf
+The detailed documentation of the product and all its function can be found at: https://github.com/muneebsmh/hopsworks-integrations/blob/main/Hopsworks%20Integration%20-%20Documentation.pdf
